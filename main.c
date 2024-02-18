@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+int ConnectGit(){
     char username[100];
     char email[300];
 
@@ -19,6 +19,23 @@ int main(){
     sprintf(gitConfigCmd, "git config --global user.email \"%s\"", email);
     system(gitConfigCmd);
 
-    printf("\nConfiguration success✔️");
+    printf("\nConfiguration success");
+}
+
+int main(){
+    int ops;
+
+    printf("[1] - Connect Account in Pc");
+    scanf("%d", &ops);
+
+    switch (ops)
+    {
+    case 1:
+        ConnectGit();
+        break;
+    default:
+        break;
+    }
+    
     return 0;
 }
