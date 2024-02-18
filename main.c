@@ -5,10 +5,10 @@ int main(){
     char username[100];
     char email[300];
 
-    printf("Username: ");
+    printf("Enter your username: ");
     scanf("%s", username);
 
-    printf("\nEmail: ");
+    printf("\nEnter your email: ");
     scanf("%s", email);
 
     char gitConfigCmd[200];
@@ -19,5 +19,6 @@ int main(){
     sprintf(gitConfigCmd, "git config --global user.email \"%s\"", email);
     system(gitConfigCmd);
 
-    printf("Configuration success");
+    printf("\nConfiguration success✔️");
+    return 0;
 }
